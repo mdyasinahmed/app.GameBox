@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: [
-            SizedBox(height: 40), // Space from the top
+            SizedBox(height: 50), // Space from the top
             Align(
               alignment: Alignment.topCenter,
               child: SizedBox(
@@ -19,27 +19,27 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              "Select Game & Enjoy",
+              "Select Game & Enjoy!",
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
                 foreground: Paint()
                   ..shader = LinearGradient(
-                    colors: [Color(0xFF779BEE), Color(0xFFF7539C)],
+                    colors: [Color(0xFF474747), Color(0xFF474747)],
                   ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0)),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 5),
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
                 children: [
-                  _buildGameTile(context, 'Tic-Tac-Toe', 'assets/tic_tac_toe.png', [Color(0xFF00B4DB), Color(0xFF0083B0)]),
-                  _buildGameTile(context, 'Memory Game', 'assets/memory_game.png', [Color(0xFF00C9FF), Color(0xFF92FE9D)]),
-                  _buildGameTile(context, 'Brick Breaker', 'assets/brick_breaker.png', [Color(0xFFFDC830), Color(0xFFF37335)]),
-                  _buildGameTile(context, 'Catch the Ball', 'assets/catch_the_ball.png', [Color(0xFFFC5C7D), Color(0xFF6A82FB)]),
-                  _buildGameTile(context, 'Puzzle Game', 'assets/puzzle_game.png', [Color(0xFFFC466B), Color(0xFF3F5EFB)]),
-                  _buildGameTile(context, 'Simon Says', 'assets/simon_says.png', [Color(0xFFFFD200), Color(0xFFF7971E)]),
+                  _buildGameTile(context, 'Tic-Tac-Toe', 'assets/games_images/tic_tac_toe.png', [Color(0xFFFA00FF), Color(0xFF8F9AFF)]),
+                  _buildGameTile(context, 'Memory Game', 'assets/games_images/memory_game.png', [Color(0xFFFF3A5A), Color(0xFFE5E5E5)]),
+                  _buildGameTile(context, 'Brick Breaker', 'assets/games_images/brick_breaker.png', [Color(0xFFFDC830), Color(0xFFF37335)]),
+                  _buildGameTile(context, 'Catch the Ball', 'assets/games_images/catch_the_ball.png', [Color(0xFFFC5C7D), Color(0xFF6A82FB)]),
+                  _buildGameTile(context, 'Puzzle Game', 'assets/games_images/puzzle_game.png', [Color(0xFFFC466B), Color(0xFF3F5EFB)]),
+                  _buildGameTile(context, 'Simon Says', 'assets/games_images/simon_says.png', [Color(0xFFFFD200), Color(0xFFF7971E)]),
                 ],
               ),
             ),
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: colors),
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

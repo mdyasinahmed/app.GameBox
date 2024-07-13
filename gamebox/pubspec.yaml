@@ -27,6 +27,12 @@ flutter:
     - assets/organisation_logo.png
     - assets/games.png
     - assets/home_logo.png
+    - assets/games_images/tic_tac_toe.png
+    - assets/games_images/memory_game.png
+    - assets/games_images/brick_breaker.png
+    - assets/games_images/catch_the_ball.png
+    - assets/games_images/puzzle_game.png
+    - assets/games_images/simon_says.png
 
   # Optionally, if you have fonts to include:
   # fonts:
