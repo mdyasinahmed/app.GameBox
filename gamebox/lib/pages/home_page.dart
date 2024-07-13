@@ -1,4 +1,40 @@
 import 'package:flutter/material.dart';
+import 'games/tic_tac_toe.dart';
+
+class MemoryGamePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: Text('Memory Game')));
+  }
+}
+
+class BrickBreakerPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: Text('Brick Breaker Game')));
+  }
+}
+
+class PuzzleGamePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: Text('Puzzle Game')));
+  }
+}
+
+class SimonSaysPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: Text('Simon Says Game')));
+  }
+}
+
+class CatchTheBallPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: Text('Catch the Ball Game')));
+  }
+}
 
 class HomePage extends StatelessWidget {
   @override
@@ -38,12 +74,12 @@ class HomePage extends StatelessWidget {
                 childAspectRatio: 1 / 1, // Adjusted aspect ratio
                 padding: EdgeInsets.all(10), // Adjusted padding
                 children: [
-                  _buildGameTile(context, 'Tic-Tac-Toe', 'assets/games_images/tic_tac_toe.png', [Color(0xFFFA00FF), Color(0xFF8F9AFF)]),
-                  _buildGameTile(context, 'Memory Game', 'assets/games_images/memory_game.png', [Color(0xFFFF3D8E), Color(0xFFFF77D9)]),
-                  _buildGameTile(context, 'Brick Breaker', 'assets/games_images/brick_breaker.png', [Color(0xFF8DD881), Color(0xFF0A870F)]),
-                  _buildGameTile(context, 'Puzzle Game', 'assets/games_images/puzzle_game.png', [Color(0xFF7E94CD), Color(0xFF3F4A67)]),
-                  _buildGameTile(context, 'Simon Says', 'assets/games_images/simon_says.png', [Color(0xFF4A65FF), Color(0xFF0DB0FF)]),
-                  _buildGameTile(context, 'Catch the Ball', 'assets/games_images/catch_the_ball.png', [Color(0xFFFDC830), Color(0xFFF37335)]),
+                  _buildGameTile(context, 'Tic-Tac-Toe', 'assets/games_images/tic_tac_toe.png', [Color(0xFFFA00FF), Color(0xFF8F9AFF)], TicTacToePage()),
+                  _buildGameTile(context, 'Memory Game', 'assets/games_images/memory_game.png', [Color(0xFFFF3D8E), Color(0xFFFF77D9)], MemoryGamePage()),
+                  _buildGameTile(context, 'Brick Breaker', 'assets/games_images/brick_breaker.png', [Color(0xFF8DD881), Color(0xFF0A870F)], BrickBreakerPage()),
+                  _buildGameTile(context, 'Puzzle Game', 'assets/games_images/puzzle_game.png', [Color(0xFF7E94CD), Color(0xFF3F4A67)], PuzzleGamePage()),
+                  _buildGameTile(context, 'Simon Says', 'assets/games_images/simon_says.png', [Color(0xFF4A65FF), Color(0xFF0DB0FF)], SimonSaysPage()),
+                  _buildGameTile(context, 'Catch the Ball', 'assets/games_images/catch_the_ball.png', [Color(0xFFFDC830), Color(0xFFF37335)], CatchTheBallPage()),
                 ],
               ),
             ),
@@ -63,11 +99,13 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildGameTile(BuildContext context, String title, String imagePath, List<Color> colors) {
+  Widget _buildGameTile(BuildContext context, String title, String imagePath, List<Color> colors, Widget gamePage) {
     return GestureDetector(
       onTap: () {
-        // Navigate to the respective game page here
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => GamePage(title)));
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => gamePage),
+        );
       },
       child: Container(
         margin: EdgeInsets.all(5.0), // Adjusted margin
