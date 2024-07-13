@@ -89,14 +89,15 @@ class _TicTacToePageState extends State<TicTacToePage> {
           onTap: () => _handleTap(index),
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
+              border: Border.all(color: Color(0xFF6679A5), width: 2.5),
             ),
             child: Center(
               child: Text(
                 board[index],
                 style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 44,
                   fontWeight: FontWeight.bold,
+                  color: board[index] == 'X' ? Color(0xFF779BEE) : Color(0xFFF7539C),
                 ),
               ),
             ),
@@ -110,23 +111,22 @@ class _TicTacToePageState extends State<TicTacToePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tic-Tac-Toe'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.refresh),
-            onPressed: _resetGame,
+        title: Text('Tic Tac Toe'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFFFA00FF), Color(0xFF8F9AFF)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
           ),
-        ],
+        ),
+        iconTheme: IconThemeData(color: Colors.white),
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: _buildBoard(),
-            ),
-          ),
           if (gameEnded)
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -138,6 +138,42 @@ class _TicTacToePageState extends State<TicTacToePage> {
                 ),
               ),
             ),
+          Expanded(
+            child: Center(
+              child: AspectRatio(
+                aspectRatio: 1.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: _buildBoard(),
+                ),
+              ),
+            ),
+          ),
+          if (gameEnded)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: ElevatedButton(
+                onPressed: _resetGame,
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white, backgroundColor: Color(0xFFF7539C),
+                  textStyle: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                child: Text('Restart Game'),
+              ),
+            ),
+          SizedBox(height: 10), // Space before the powered by image
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: SizedBox(
+              width: 100, // Adjusted width
+              height: 80, // Adjusted height
+              child: Image.asset('assets/powered_by.png'),
+            ),
+          ),
+          SizedBox(height: 10), // S
         ],
       ),
     );
