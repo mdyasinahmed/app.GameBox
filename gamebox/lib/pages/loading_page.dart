@@ -9,16 +9,16 @@ class LoadingPage extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: [
-            Spacer(flex: 2),
+            Spacer(flex: 3),
             Align(
               alignment: Alignment.center,
               child: SizedBox(
-                width: 200,
-                height: 200,
+                width: 250,
+                height: 250,
                 child: Image.asset('assets/logo.png'),
               ),
             ),
-            Spacer(flex: 3),
+            Spacer(flex: 2),
             ElevatedButton(
               onPressed: () {
                 // Navigator.push(
@@ -48,7 +48,7 @@ class LoadingPage extends StatelessWidget {
                 ),
               ),
             ),
-            Spacer(flex: 1),
+            Spacer(flex: 3),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: Column(
