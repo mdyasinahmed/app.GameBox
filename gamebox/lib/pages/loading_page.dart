@@ -18,6 +18,15 @@ class LoadingPage extends StatelessWidget {
                 child: Image.asset('assets/logo.png'),
               ),
             ),
+            SizedBox(height: 20),
+            Align(
+              alignment: Alignment.center,
+              child: SizedBox(
+                width: 200,
+                height: 200,
+                child: Image.asset('assets/games.png'), 
+              ),
+            ),
             Spacer(flex: 2),
             ElevatedButton(
               onPressed: () {
@@ -50,7 +59,7 @@ class LoadingPage extends StatelessWidget {
             ),
             Spacer(flex: 3),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+              padding: const EdgeInsets.only(bottom: 25),
               child: Column(
                 children: [
                   Text(
@@ -63,7 +72,7 @@ class LoadingPage extends StatelessWidget {
                     height: 80,
                     child: Image.asset('assets/organisation_logo.png'),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Text(
                     '© 2024 GameBox',
                     style: TextStyle(color: Color(0xFF474747), fontSize: 12),
