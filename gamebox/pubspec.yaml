@@ -33,6 +33,7 @@ flutter:
     - assets/games_images/catch_the_ball.png
     - assets/games_images/puzzle_game.png
     - assets/games_images/simon_says.png
+    - assets/powered_by.png
 
   # Optionally, if you have fonts to include:
   # fonts:
