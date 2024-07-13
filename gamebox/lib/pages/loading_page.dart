@@ -24,7 +24,7 @@ class LoadingPage extends StatelessWidget {
               child: SizedBox(
                 width: 200,
                 height: 200,
-                child: Image.asset('assets/games.png'), 
+                child: Image.asset('assets/games.png'),
               ),
             ),
             Spacer(flex: 2),
@@ -46,7 +46,7 @@ class LoadingPage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFFA11818), Color(0xFFFF5F5F)],
+                    colors: [Color(0xFF779BEE), Color(0xFFF7539C)],
                   ),
                   borderRadius: BorderRadius.circular(30.0),
                 ),
@@ -66,13 +66,13 @@ class LoadingPage extends StatelessWidget {
                     'POWERED BY',
                     style: TextStyle(color: Color(0xFF474747), fontWeight: FontWeight.bold, fontSize: 12),
                   ),
-                  SizedBox(height: 5),  // Reduced the height here
+                  // SizedBox(height: 5),
                   SizedBox(
                     width: 100,
                     height: 80,
                     child: Image.asset('assets/organisation_logo.png'),
                   ),
-                  SizedBox(height: 5),
+                  // SizedBox(height: 5),
                   Text(
                     '© 2024 GameBox',
                     style: TextStyle(color: Color(0xFF474747), fontSize: 12),
