@@ -53,7 +53,7 @@ class LoadingPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 12.0),
                 child: Text(
                   "Let's Play",
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -62,15 +62,11 @@ class LoadingPage extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 25),
               child: Column(
                 children: [
-                  Text(
-                    'POWERED BY',
-                    style: TextStyle(color: Color(0xFF474747), fontWeight: FontWeight.bold, fontSize: 12),
-                  ),
                   // SizedBox(height: 5),
                   SizedBox(
-                    width: 100,
-                    height: 80,
-                    child: Image.asset('assets/organisation_logo.png'),
+                    width: 120,
+                    height: 120,
+                    child: Image.asset('assets/powered_by.png'),
                   ),
                   // SizedBox(height: 5),
                   Text(
