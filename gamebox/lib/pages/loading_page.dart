@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'home_page.dart'; // Import the home page
+// import 'home_page.dart';
 
 class LoadingPage extends StatelessWidget {
   @override
@@ -43,8 +43,8 @@ class LoadingPage extends StatelessWidget {
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 12.0),
                 child: Text(
-                    "Let's Play"
-                      style: TextStyle(color: Color(0xFF474747), fontSize: 12),
+                  "Let's Play",
+                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
             ),
