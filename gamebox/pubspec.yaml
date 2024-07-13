@@ -26,6 +26,7 @@ flutter:
     - assets/logo.png
     - assets/organisation_logo.png
     - assets/games.png
+    - assets/home_logo.png
 
   # Optionally, if you have fonts to include:
   # fonts:

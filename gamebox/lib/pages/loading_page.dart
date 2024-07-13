@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'home_page.dart';
+import 'home_page.dart';
 
 class LoadingPage extends StatelessWidget {
   @override
@@ -30,10 +30,10 @@ class LoadingPage extends StatelessWidget {
             Spacer(flex: 2),
             ElevatedButton(
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => HomePage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
